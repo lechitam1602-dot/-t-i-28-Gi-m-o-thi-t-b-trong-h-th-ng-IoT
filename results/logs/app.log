@@ -1,0 +1,63 @@
+2026-07-22 16:49:18,267 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2026-07-22 16:49:18,268 [INFO] [33mPress CTRL+C to quit[0m
+2026-07-22 16:49:18,270 [INFO]  * Restarting with stat
+2026-07-22 16:49:18,727 [WARNING]  * Debugger is active!
+2026-07-22 16:49:18,730 [INFO]  * Debugger PIN: 800-363-560
+2026-07-22 16:50:06,626 [INFO] [SUCCESS] Nhận dữ liệu HỢP LỆ từ 'sensor-node-01': value = 25.5
+2026-07-22 16:50:06,627 [INFO] 127.0.0.1 - - [22/Jul/2026 16:50:06] "POST /telemetry HTTP/1.1" 200 -
+2026-07-22 16:50:48,479 [WARNING] [SPOOF DETECTED] Từ chối: device_id 'fake-sensor-99' GIẢ MẠO hoặc KHÔNG TỒN TẠI trong danh sách!
+2026-07-22 16:50:48,490 [INFO] 127.0.0.1 - - [22/Jul/2026 16:50:48] "[31m[1mPOST /telemetry HTTP/1.1[0m" 401 -
+2026-07-22 16:51:38,013 [WARNING] [SPOOF DETECTED] Từ chối: Token không đúng cho thiết bị 'sensor-node-01'. (Token nhận được: 'wrong_token_123')
+2026-07-22 16:51:38,014 [INFO] 127.0.0.1 - - [22/Jul/2026 16:51:38] "[31m[1mPOST /telemetry HTTP/1.1[0m" 403 -
+2026-07-22 17:05:40,424 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2026-07-22 17:05:40,425 [INFO] [33mPress CTRL+C to quit[0m
+2026-07-22 17:05:40,426 [INFO]  * Restarting with stat
+2026-07-22 17:05:40,779 [WARNING]  * Debugger is active!
+2026-07-22 17:05:40,783 [INFO]  * Debugger PIN: 800-363-560
+2026-07-22 17:06:21,860 [INFO] 127.0.0.1 - - [22/Jul/2026 17:06:21] "[31m[1mGET /telemetry HTTP/1.1[0m" 405 -
+2026-07-22 17:06:21,979 [INFO] 127.0.0.1 - - [22/Jul/2026 17:06:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-22 17:06:27,607 [INFO] 127.0.0.1 - - [22/Jul/2026 17:06:27] "[33mGET / HTTP/1.1[0m" 404 -
+2026-07-22 17:07:46,106 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2026-07-22 17:07:46,106 [INFO] [33mPress CTRL+C to quit[0m
+2026-07-22 17:07:46,107 [INFO]  * Restarting with stat
+2026-07-22 17:07:46,475 [WARNING]  * Debugger is active!
+2026-07-22 17:07:46,478 [INFO]  * Debugger PIN: 800-363-560
+2026-07-22 17:08:12,499 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2026-07-22 17:08:12,499 [INFO] [33mPress CTRL+C to quit[0m
+2026-07-22 17:08:12,501 [INFO]  * Restarting with stat
+2026-07-22 17:08:12,864 [WARNING]  * Debugger is active!
+2026-07-22 17:08:12,868 [INFO]  * Debugger PIN: 800-363-560
+2026-07-22 17:09:37,947 [INFO] [SUCCESS] Nhận dữ liệu HỢP LỆ từ 'sensor-node-01': value = 25.5
+2026-07-22 17:09:37,949 [INFO] 127.0.0.1 - - [22/Jul/2026 17:09:37] "POST /telemetry HTTP/1.1" 200 -
+2026-07-22 17:12:57,133 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2026-07-22 17:12:57,134 [INFO] [33mPress CTRL+C to quit[0m
+2026-07-22 17:12:57,135 [INFO]  * Restarting with stat
+2026-07-22 17:12:57,518 [WARNING]  * Debugger is active!
+2026-07-22 17:12:57,521 [INFO]  * Debugger PIN: 800-363-560
+2026-07-22 17:13:19,646 [WARNING] [SPOOF DETECTED] Từ chối: device_id 'fake-sensor-99' GIẢ MẠO hoặc KHÔNG TỒN TẠI trong danh sách!
+2026-07-22 17:13:19,647 [INFO] 127.0.0.1 - - [22/Jul/2026 17:13:19] "[31m[1mPOST /telemetry HTTP/1.1[0m" 401 -
+2026-07-22 17:14:26,375 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.86:5000
+2026-07-22 17:14:26,375 [INFO] [33mPress CTRL+C to quit[0m
+2026-07-22 17:14:26,377 [INFO]  * Restarting with stat
+2026-07-22 17:14:26,759 [WARNING]  * Debugger is active!
+2026-07-22 17:14:26,762 [INFO]  * Debugger PIN: 800-363-560
+2026-07-22 17:14:34,856 [WARNING] [SPOOF DETECTED] Từ chối: Token không đúng cho thiết bị 'sensor-node-01'. (Token nhận được: 'wrong_token_123')
+2026-07-22 17:14:34,858 [INFO] 127.0.0.1 - - [22/Jul/2026 17:14:34] "[31m[1mPOST /telemetry HTTP/1.1[0m" 403 -

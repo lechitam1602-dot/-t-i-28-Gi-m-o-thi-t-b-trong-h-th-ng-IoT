@@ -1,0 +1,10 @@
+{
+  "sensor-node-01": {
+    "token": "secret_token_12345",
+    "secret_key": "my_shared_secret_key_1"
+  },
+  "sensor-node-02": {
+    "token": "secret_token_67890",
+    "secret_key": "my_shared_secret_key_2"
+  }
+}

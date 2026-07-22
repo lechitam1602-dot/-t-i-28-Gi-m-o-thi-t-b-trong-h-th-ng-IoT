@@ -1,0 +1,15 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": true
+  },
+  "security": {
+    "enable_hmac_check": true,
+    "token_expiration_seconds": 3600
+  },
+  "paths": {
+    "devices_db": "data/devices.json",
+    "log_file": "results/logs/app.log"
+  }
+}
