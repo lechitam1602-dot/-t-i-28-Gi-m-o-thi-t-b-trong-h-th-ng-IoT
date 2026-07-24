@@ -7,14 +7,11 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# --- CẤU HÌNH GHI LOG ---
-# Tự động tạo thư mục results/logs nếu chưa có và lưu log vào file app.log
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_DIR = os.path.join(BASE_DIR, "../results/logs")
 os.makedirs(LOG_DIR, exist_ok=True)
 LOG_FILE = os.path.join(LOG_DIR, "app.log")
 
-# Thiết lập ghi log xuất ra cả File và Console
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -24,7 +21,6 @@ logging.basicConfig(
     ]
 )
 
-# Đường dẫn tới file devices.json trong thư mục data/
 DEVICES_FILE = os.path.join(BASE_DIR, "../data/devices.json")
 
 def load_devices():
@@ -34,7 +30,6 @@ def load_devices():
             return json.load(f)
     return {}
 
-# --- API ENDPOINT /telemetry ---
 @app.route('/telemetry', methods=['POST'])
 def receive_telemetry():
     data = request.get_json()
@@ -47,11 +42,10 @@ def receive_telemetry():
     device_id = data.get("device_id")
     value = data.get("value")
     token = data.get("token")
-    client_hmac = data.get("hmac") # Dùng cho trường hợp xác thực nâng cao HMAC
+    client_hmac = data.get("hmac") 
 
     devices = load_devices()
 
-    # Kiểm tra 1: device_id có tồn tại trong hệ thống không?
     if not device_id or device_id not in devices:
         msg = f"[SPOOF DETECTED] Từ chối: device_id '{device_id}' GIẢ MẠO hoặc KHÔNG TỒN TẠI trong danh sách!"
         logging.warning(msg)
@@ -59,13 +53,11 @@ def receive_telemetry():
 
     device_info = devices[device_id]
 
-    # Kiểm tra 2: Token gửi lên có khớp với token đã lưu không?
     if token and token != device_info.get("token"):
         msg = f"[SPOOF DETECTED] Từ chối: Token không đúng cho thiết bị '{device_id}'. (Token nhận được: '{token}')"
         logging.warning(msg)
         return jsonify({"status": "rejected", "reason": "Token không hợp lệ"}), 403
 
-    # Kiểm tra 3 (Nâng cao): Nếu thiết bị gửi kèm chữ ký HMAC
     if client_hmac:
         secret_key = device_info.get("secret_key", "").encode('utf-8')
         message = f"{device_id}:{value}".encode('utf-8')
@@ -76,7 +68,6 @@ def receive_telemetry():
             logging.warning(msg)
             return jsonify({"status": "rejected", "reason": "Chữ ký HMAC không hợp lệ"}), 403
 
-    # Nếu vượt qua tất cả kiểm tra -> Request hợp lệ
     msg = f"[SUCCESS] Nhận dữ liệu HỢP LỆ từ '{device_id}': value = {value}"
     logging.info(msg)
     return jsonify({"status": "success", "message": "Dữ liệu hợp lệ đã được chấp nhận"}), 200
